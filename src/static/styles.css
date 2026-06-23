@@ -672,3 +672,187 @@ footer {
   padding: 15px;
   font-weight: bold;
 }
+
+/* Announcements Container */
+#announcements-container {
+  width: 100%;
+}
+
+.announcement-banner-item {
+  background: linear-gradient(135deg, #4caf50 0%, #45a049 100%);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Announcements Management Modal */
+.announcements-modal-content {
+  width: 90%;
+  max-width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.announcements-management {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.announcements-form-section {
+  padding: 15px;
+  background-color: var(--background);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+.announcements-form-section h4 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.announcements-form-section textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  resize: vertical;
+}
+
+.announcements-form-section textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 2px rgba(83, 75, 174, 0.1);
+}
+
+.announcements-list-section {
+  padding: 15px;
+  background-color: var(--background);
+  border-radius: 5px;
+  border: 1px solid var(--border);
+}
+
+.announcements-list-section h4 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.announcement-item {
+  padding: 12px;
+  background-color: white;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.announcement-item-content {
+  flex: 1;
+}
+
+.announcement-item-message {
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.announcement-item-dates {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.announcement-item-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.announcement-item-actions {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.btn-edit,
+.btn-delete {
+  padding: 4px 8px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-edit {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.btn-edit:hover {
+  background-color: var(--primary);
+}
+
+.btn-delete {
+  background-color: var(--error);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: #a71e1e;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.no-announcements {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
